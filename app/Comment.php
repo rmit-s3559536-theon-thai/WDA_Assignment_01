@@ -8,7 +8,7 @@ class Comment extends Model {
     protected $fillable = ['comment' ];
 
 
-    public function comment_id() {
+    public function ticket () {
         return $this->belongsTo('App\TicketDetails');
     }
 

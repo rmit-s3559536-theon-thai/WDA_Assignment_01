@@ -16,5 +16,13 @@ Route::get('/', function () {
 });
 
 
+//View for redirection after creating new ticket
+Route::get('ticketview', function () {
+    return view('ticket.view');
+})->name('ticketview');
+
+
 Route::resource('user', 'UserController');
 Route::resource('ticket', 'TicketController');
+
+

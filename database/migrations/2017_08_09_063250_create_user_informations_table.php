@@ -27,9 +27,9 @@ class CreateUserInformationsTable extends Migration
         });
 
         Schema::table('ticket_details', function ($table) {
-            $table->integer('ticket_id')->unsigned();
-            $table->foreign('ticket_id')
-                ->references('id')->on('ticket_details')
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')
+                ->references('id')->on('user_informations')
                 ->onDelete('cascade');
         });
     }

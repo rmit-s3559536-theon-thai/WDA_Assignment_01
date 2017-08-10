@@ -21,6 +21,7 @@ class TicketController extends Controller
 
     public function store(Request $request) {
         $this->validate($request, [
+            'user' => 'required', 
             'os' => 'required',
             'issue' => 'required',
             'comment' => 'required',
@@ -28,27 +29,24 @@ class TicketController extends Controller
 
         $allRequest = $request->all();
         $ticket_details = new TicketDetails();
-        $ticket_details->name = $allRequest['name'];
-        $ticket_details->email = $allRequest['email'];
-        $ticket_details->car_id = $allRequest['item_id'];
+        $ticket_details->os = $allRequest['os'];
+        $ticket_details->issue = $allRequest['issue'];
+        $ticket_details->user_id = $allRequest['user_id'];
         $ticket_details->save();
 
         $ticketComments = new Comment();
-        $ticketComments->address_line_1 = $allRequest['address_line_1'];
-        $ticketComments->address_line_2 = $allRequest['address_line_2'];
-        $ticketComments->suburb = $allRequest['suburb'];
-        $ticketComments->state = $allRequest['state'];
-        $ticketComments->country = $allRequest['country'];
-        $ticketComments->booking_id = $ticket_details->id;
+        $ticketComments->comment = $allRequest['comment'];
+        $ticketComments->ticket_id = $ticket_details->id;
         $ticketComments->save();
 
         /*
          * Using sessions
          * */
         $request->session()->put('ticketComments', $ticketComments);
-        $request->session()->put('name', $ticket_details->name);
+        $request->session()->put('ticket', $ticket_details);   
 
-        return redirect()->route('view');
+
+        return redirect()->route('ticketview');
     }
 
 }

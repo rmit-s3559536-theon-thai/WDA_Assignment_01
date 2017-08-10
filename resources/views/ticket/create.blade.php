@@ -35,7 +35,7 @@
 
 <div class="form-group">
     {!! Form::Label('user', 'User') !!}
-    <select class="form-control" name="item_id">
+    <select class="form-control" name="user_id">
         @foreach($users as $user)
         <option value="{{$user->id}}">{{$user->fname}} {{$user->lname}}</option>
         @endforeach

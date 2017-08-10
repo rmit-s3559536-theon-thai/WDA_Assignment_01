@@ -23,9 +23,9 @@ class CreateTicketDetailsTable extends Migration
         });
 
         Schema::table('comments', function ($table) {
-            $table->integer('comments_id')->unsigned();
-            $table->foreign('comments_id')
-                ->references('id')->on('comments')
+            $table->integer('ticket_id')->unsigned();
+            $table->foreign('ticket_id')
+                ->references('id')->on('ticket_details')
                 ->onDelete('cascade');
         });
     }

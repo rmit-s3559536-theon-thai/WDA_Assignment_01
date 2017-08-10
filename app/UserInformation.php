@@ -8,7 +8,7 @@ class UserInformation extends Model
 {
     protected $fillable = [ 'email', 'fname', 'lname', 'studentno' ];
 
-    public function ticket_number() {
+    public function tickets () {
         return $this->hasMany('App\TicketDetails');
     }
 }
