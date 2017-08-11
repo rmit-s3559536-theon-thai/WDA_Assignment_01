@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\UserInformation;
+use App\Http\Requests\UserInfoFormRequest;
 
 
 class UserController extends Controller
@@ -14,14 +15,13 @@ class UserController extends Controller
         return view('user.create', ['user' => $user ]);
     }
 
-    public function store(Request $request) {
-    	
-        $this->validate($request, [
-            'fname' => 'required',
-            'lname' => 'required',
-            'studentno' => 'required',
-            'email' => 'required',
-        ]);
+    public function store(UserInfoFormRequest $request) {
+//        $this->validate($request, [
+//            'fname' => 'required',
+//            'lname' => 'required',
+//            'studentno' => 'required',
+//            'email' => 'required',
+//        ]);
 
         //Model
         UserInformation::create($request->all());

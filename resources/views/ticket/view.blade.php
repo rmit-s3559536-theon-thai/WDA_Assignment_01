@@ -13,6 +13,8 @@
         <p>First Name: {!! Session::get('name') !!}</p>
         <p>OS: {!! Session::get('ticket')->os !!}</p>
         <p>Issue: {!! Session::get('ticket')->issue !!}</p>
-        
     @endif
+
+    <a href="{{URL::to('/')}}"><div class="btn btn-primary">Go To Main</div></a>
+
 @endsection

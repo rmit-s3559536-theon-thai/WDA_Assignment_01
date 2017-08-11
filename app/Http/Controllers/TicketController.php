@@ -6,7 +6,7 @@ use App\TicketDetails;
 use App\Comment;
 use Illuminate\Http\Request;
 use App\UserInformation;
-
+use App\Http\Requests\TicketFormRequest;
 
 
 
@@ -19,13 +19,13 @@ class TicketController extends Controller
     }
 
 
-    public function store(Request $request) {
-        $this->validate($request, [
-            'user_id' => 'required',
-            'os' => 'required',
-            'issue' => 'required',
-            'comment' => 'required',
-        ]);
+    public function store(TicketFormRequest $request) {
+//        $this->validate($request, [
+//            'user_id' => 'required',
+//            'os' => 'required',
+//            'issue' => 'required',
+//            'comment' => 'required',
+//        ]);
 
         $allRequest = $request->all();
 
