@@ -21,13 +21,14 @@ class TicketController extends Controller
 
     public function store(Request $request) {
         $this->validate($request, [
-            'user' => 'required', 
+            'user_id' => 'required',
             'os' => 'required',
             'issue' => 'required',
             'comment' => 'required',
         ]);
 
         $allRequest = $request->all();
+
         $ticket_details = new TicketDetails();
         $ticket_details->os = $allRequest['os'];
         $ticket_details->issue = $allRequest['issue'];
