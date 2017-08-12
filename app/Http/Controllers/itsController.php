@@ -9,18 +9,19 @@ use App\UserInformation;
 
 
 
-class itsController extends Controller
-{
+class itsController extends Controller {
+  
     public function index () {
     	
     	$ticketDetail = TicketDetails::all();
+
     	return view('its.index', ['ticketDetail' => $ticketDetail]);
+
+
+
     }
 
-    public function update ($id) {
-		return view('its.ticket');
-    }
-
+  
     public function edit($id) {
         // get the nerd
         $ticketDetail = TicketDetails::find($id);
@@ -29,5 +30,8 @@ class itsController extends Controller
         return view('its.ticket', ['ticketDetail' => $ticketDetail]);
     }
 
+    public function update ($id) {
+		return view('its.ticket');
+    }
 
 }

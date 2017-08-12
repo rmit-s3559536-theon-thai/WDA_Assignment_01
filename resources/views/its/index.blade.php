@@ -8,9 +8,10 @@
 
 
                  @foreach($ticketDetail as $key => $value)
-                 	{{ $value->os }}
+                 	{{ $value->user->fname }}
+                 	{{ $value->user->lname }} |
+                 	{{ $value->os }} |
                  	{{ $value->issue }}
-
                  	<a href="{{  URL::to('its/' . $value->id . '/edit') }}">Click here</a>
 
                  	<br/>

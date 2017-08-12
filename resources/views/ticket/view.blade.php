@@ -11,6 +11,7 @@
     @if(!empty(Session::get('ticket')))
         <b>Below are the details</b>
         <p>First Name: {!! Session::get('name') !!}</p>
+        
         <p>OS: {!! Session::get('ticket')->os !!}</p>
         <p>Issue: {!! Session::get('ticket')->issue !!}</p>
     @endif
