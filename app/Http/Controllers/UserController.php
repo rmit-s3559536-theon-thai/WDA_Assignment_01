@@ -16,17 +16,13 @@ class UserController extends Controller
     }
 
     public function store(UserInfoFormRequest $request) {
-//        $this->validate($request, [
-//            'fname' => 'required',
-//            'lname' => 'required',
-//            'studentno' => 'required',
-//            'email' => 'required',
-//        ]);
 
         //Model
         UserInformation::create($request->all());
 
         //Redirect with success message
         return redirect()->route('ticket.create') ->with('success','User added successfully');
+
+        
     }
 }

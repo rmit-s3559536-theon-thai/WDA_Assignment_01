@@ -11,18 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
+
+Route::get('/', 'staticPagesController@home'); 
+Route::get('home', 'staticPagesController@home'); 
+Route::get('faq', 'staticPagesController@faq'); 
+
+
+
+Route::resource('user', 'UserController');
+Route::resource('ticket', 'TicketController');
+Route::resource('its', 'itsController');
 
 
 //View for redirection after creating new ticket
 Route::get('ticketview', function () {
     return view('ticket.view');
 })->name('ticketview');
-
-
-Route::resource('user', 'UserController');
-Route::resource('ticket', 'TicketController');
-
-

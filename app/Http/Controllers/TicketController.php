@@ -20,12 +20,6 @@ class TicketController extends Controller
 
 
     public function store(TicketFormRequest $request) {
-//        $this->validate($request, [
-//            'user_id' => 'required',
-//            'os' => 'required',
-//            'issue' => 'required',
-//            'comment' => 'required',
-//        ]);
 
         $allRequest = $request->all();
 
@@ -33,6 +27,7 @@ class TicketController extends Controller
         $ticket_details->os = $allRequest['os'];
         $ticket_details->issue = $allRequest['issue'];
         $ticket_details->user_id = $allRequest['user_id'];
+        $ticket_details->status = 'pending';
         $ticket_details->save();
 
         $ticketComments = new Comment();
@@ -49,5 +44,7 @@ class TicketController extends Controller
 
         return redirect()->route('ticketview');
     }
+
+
 
 }

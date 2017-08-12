@@ -18,7 +18,8 @@ class CreateTicketDetailsTable extends Migration
             
             $table->string('os');
             $table->string('issue');
-            
+            $table->string('status');
+
             $table->timestamps();
         });
 
