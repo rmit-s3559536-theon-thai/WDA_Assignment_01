@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Thank You</h2>
+                <h2>Your request is submitted successfully!</h2>
             </div>
         </div>
     </div>
@@ -16,6 +16,6 @@
         <p>Issue: {!! Session::get('ticket')->issue !!}</p>
     @endif
 
-    <a href="{{URL::to('/')}}"><div class="btn btn-primary">Go To Main</div></a>
+    <a href="{{URL::to('/')}}"><div class="button button1">Go To Main</div></a>
 
 @endsection
