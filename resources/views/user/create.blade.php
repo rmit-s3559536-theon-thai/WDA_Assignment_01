@@ -47,7 +47,7 @@
 
 
 
-<button class="btn btn-success" type="submit">Add User!</button>
+<button class="button buttonRed" type="submit">Add User</button>
 
 {!! Form::close() !!}
 @endsection

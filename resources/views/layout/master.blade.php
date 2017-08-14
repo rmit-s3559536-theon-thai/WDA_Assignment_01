@@ -8,7 +8,7 @@
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-image: url('images/web_bg.jpg');">
 @include('shared.navbar')
 <div class="container">
     @yield('content')
