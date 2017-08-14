@@ -16,6 +16,6 @@
         <p>Issue: {!! Session::get('ticket')->issue !!}</p>
     @endif
 
-    <a href="{{URL::to('/')}}"><div class="button button1">Go To Main</div></a>
+    <a href="{{URL::to('/')}}"><div class="button buttonRed">Go To Main</div></a>
 
 @endsection

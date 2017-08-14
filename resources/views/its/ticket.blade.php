@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Ticket {{ $ticketDetail->id}}</h2>
+                <h4>Ticket {{ $ticketDetail->id}}</h4>
 
-                <h2>OS : {{ $ticketDetail->os }}</h2>
-                <h2>Issue : {{ $ticketDetail->issue }}</h2>
+                <h4>OS : {{ $ticketDetail->os }}</h4>
+                <h4>Issue : {{ $ticketDetail->issue }}</h4>
             </div>
         </div>
     </div>

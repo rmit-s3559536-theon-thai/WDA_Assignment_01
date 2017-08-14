@@ -59,7 +59,7 @@
 
 
 
-<button class="btn btn-success" type="submit">Submit Ticket now</button>
+<button class="button buttonRed" type="submit">Submit Ticket now</button>
 
 {!! Form::close() !!}
 @endsection
