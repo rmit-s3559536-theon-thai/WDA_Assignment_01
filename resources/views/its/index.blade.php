@@ -4,17 +4,16 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>ITS</h2>
+                <h2>Submitted Tickets Status</h2>
 
 
                  @foreach($ticketDetail as $key => $value)
-                 	{{ $value->user->fname }}
-                 	{{ $value->user->lname }} |
-                 	{{ $value->os }} |
-                 	{{ $value->issue }}
-                 	<a href="{{  URL::to('its/' . $value->id . '/edit') }}">Click here</a>
+                    <p>Name : {{ $value->user->fname }} {{ $value->user->lname }}</p>
+                 	{{--<p>OS : {{ $value->os }}</p>--}}
+                 	{{--<p>Issue : {{ $value->issue }}</p>--}}
+                 	<a class="button buttonRed" href="{{  URL::to('its/' . $value->id . '/edit') }}">Click Here</a>
 
-                 	<br/>
+                 	<br/><br/>
                  @endforeach
             </div>
         </div>
