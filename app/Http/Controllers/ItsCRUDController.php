@@ -16,8 +16,8 @@ class ItsCRUDController extends Controller
      */
     public function index(Request $request)
     {
-        $ticketDetails = TicketDetails::orderBy('id','DESC')->paginate(5);
-        return view('ItsCRUD.index',compact('ticketDetails')) ->with('i', ($request->input('page', 1) - 1) * 5);
+        $ticketDetail = TicketDetails::orderBy('id','DESC')->paginate(5);
+        return view('ItsCRUD.index',compact('ticketDetail')) ->with('i', ($request->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -54,8 +54,8 @@ class ItsCRUDController extends Controller
      */
     public function show($id)
     {
-        $ticketDetails = TicketDetails::find($id);
-        return view('ItsCRUD.show',compact('ticketDetails'));
+        $ticketDetail = TicketDetails::find($id);
+        return view('ItsCRUD.show',compact('ticketDetail'));
     }
 
     /**
@@ -66,8 +66,8 @@ class ItsCRUDController extends Controller
      */
     public function edit($id)
     {
-        $ticketDetails = TicketDetails::find($id);
-        return view('ItsCRUD.edit',compact('ticketDetails'));
+        $ticketDetail = TicketDetails::find($id);
+        return view('ItsCRUD.edit',compact('ticketDetail'));
     }
 
     /**
@@ -83,6 +83,10 @@ class ItsCRUDController extends Controller
             'comment' => 'required',
             'status' => 'required',
         ]);
+//        $comment = $request->input('comment');
+//        $status = $request->input('status');
+//        DB::update('update ticket_details set status = ? where id = ?', [$status, $id]);
+//        DB::update('update comments set comment = ? where id = ?', [$comment, $id]);
         TicketDetails::find($id)->update($request->all());
         return redirect()->route('ItsCRUD.index') ->with('success','Ticket status updated successfully');
     }

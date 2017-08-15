@@ -1,5 +1,5 @@
 @extends('layout.master')
-@yield('title', 'its ticket management')
+@section('title', 'its ticket management')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">

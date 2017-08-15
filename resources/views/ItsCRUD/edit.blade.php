@@ -1,11 +1,11 @@
 @extends('layout.master')
-@yield('title', 'its ticket management')
+@section('title', 'its ticket management')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Product</h2>
+                <h2>Edit {{ $ticketDetail->user->fname }} {{ $ticketDetail->user->lname }}'s status</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('ItsCRUD.index') }}"> Back</a>
@@ -22,7 +22,7 @@
             </ul>
         </div>
     @endif
-    {!! Form::model($ticketDetails, ['method' => 'PATCH','route' => ['ItsCRUD.update', $ticketDetails->id]]) !!}
+    {!! Form::model($ticketDetail, ['method' => 'PATCH','route' => ['ItsCRUD.update', $ticketDetail->id]]) !!}
     @include('ItsCRUD.form')
     {!! Form::close() !!}
 @endsection

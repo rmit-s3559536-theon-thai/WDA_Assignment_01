@@ -1,4 +1,5 @@
 @extends('layout.master')
+@section('title', 'Ticket Lists')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -21,7 +22,7 @@
             <th>Status</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($ticketDetails as $key => $value)
+        @foreach ($ticketDetail as $key => $value)
             <tr>
                 <td>{{ ++$i }}</td>
                 <td>{{ $value->user->fname }} {{ $value->user->lname }}</td>
@@ -29,6 +30,7 @@
                 <td>{{ $value->issue }}</td>
                 <td>{{ $value->status}}</td>
                 <td>
+                    {{--<a class="btn btn-success" href="{{ route('ItsCRUD.create', $value->id) }}">Create</a>--}}
                     <a class="btn btn-info" href="{{ route('ItsCRUD.show',$value->id) }}">Show</a>
                     <a class="btn btn-primary" href="{{ route('ItsCRUD.edit',$value->id) }}">Edit</a>
                     {!! Form::open(['method' => 'DELETE','route' => ['ItsCRUD.destroy', $value->id],'style'=>'display:inline']) !!}
@@ -38,5 +40,5 @@
             </tr>
         @endforeach
     </table>
-    {!! $ticketDetails->render() !!}
+    {!! $ticketDetail->render() !!}
 @endsection
