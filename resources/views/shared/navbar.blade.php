@@ -1,10 +1,10 @@
 <div class="container-fluid">
     <div class="row">
         <a href="http://www.rmit.edu.au">
-            <img class="mainLogo" src="images/rmit_logo_01.png" alt="RMIT logo" />
+            <img class="mainLogo" src="{{asset('images/rmit_logo_01.png')}}" alt="RMIT Logo">
         </a>
         <a href="{{url('/')}}">
-            <img class="itsLogo" src="images/its_logo.png" alt="ITS logo"/>
+            <img class="itsLogo" src="{{asset('images/its_logo.png')}}" alt="ITS Logo">
         </a>
     </div>
 </div>
