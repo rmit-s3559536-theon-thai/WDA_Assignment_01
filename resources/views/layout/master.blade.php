@@ -12,6 +12,6 @@
 <div class="container">
     @yield('content')
 </div>
-@include('shared.footer')
+{{-- @include('shared.footer') --}}
 </body>
 </html>

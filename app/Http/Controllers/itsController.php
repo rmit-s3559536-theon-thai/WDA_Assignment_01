@@ -26,8 +26,11 @@ class itsController extends Controller {
         // get the nerd
         $ticketDetail = TicketDetails::find($id);
 
-        // show the view and pass the nerd to it
+
+
+        // show the view and pass the ticket details to it
         return view('its.ticket', ['ticketDetail' => $ticketDetail]);
+        
     }
 
     public function update ($id) {

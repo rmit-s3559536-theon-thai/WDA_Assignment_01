@@ -9,9 +9,7 @@
         </div>
     </div>
     @if(!empty(Session::get('ticket')))
-        <b>Below are the details</b>
-        <p>First Name: {!! Session::get('name') !!}</p>
-        
+        <b>Below are the details</b> 
         <p>OS: {!! Session::get('ticket')->os !!}</p>
         <p>Issue: {!! Session::get('ticket')->issue !!}</p>
     @endif
