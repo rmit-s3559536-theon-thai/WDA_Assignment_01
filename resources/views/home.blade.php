@@ -31,12 +31,7 @@
             <div class="carousel-inner">
 
                 <div class="item active">
-                    <div class="col-md-7">
-                        <img class="imgStyle" src="images/bld80.jpg" alt="Building 80">
-                    </div>
-                    <div class="col-md-5">
-                        <p>sadfdsfasfadfads</p>
-                    </div>
+                    <img class="imgStyle" src="images/bld80.jpg" alt="Building 80" style="margin:auto;">
                     {{--<div class="carousel-caption">--}}
                     {{--<h3>Los Angeles</h3>--}}
                     {{--<p>LA is always so much fun!</p>--}}
@@ -44,12 +39,7 @@
                 </div>
 
                 <div class="item">
-                    <div class="col-md-7">
-                        <img class="imgStyle" src="images/its_image.jpg" alt="ITS poster" style="width:100%;">
-                    </div>
-                    <div class="col-md-5">
-                        <p>TEST</p>
-                    </div>
+                    <img class="imgStyle" src="images/its_image.jpg" alt="ITS poster" style="margin:auto;">
                     {{--<div class="carousel-caption">--}}
                     {{--<h3>Chicago</h3>--}}
                     {{--<p>Thank you, Chicago!</p>--}}
