@@ -17,8 +17,6 @@ class itsController extends Controller {
 
     	return view('its.index', ['ticketDetail' => $ticketDetail]);
 
-
-
     }
 
   
