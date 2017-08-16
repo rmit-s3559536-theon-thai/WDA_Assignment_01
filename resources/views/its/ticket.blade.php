@@ -31,17 +31,20 @@
     <div class="row">
         <div class="col-lg-4">
             <h4>Comments</h4>
+            @foreach ($ticketDetail->comments as $comments)
             <div class="well">
-                @foreach ($ticketDetail->comments as $comments)
                     {{ $comments->comment }}
-                @endforeach
             </div>
+            @endforeach
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-4">
-            <textarea class="form-control" rows="3"></textarea>
-        </div>
-    </div>
+    
+
+
+    {!! Form::model($ticketDetail, ['method' => 'PATCH','route' => ['its.update', $ticketDetail->id]]) !!}
+        @include('its.form')
+    {!! Form::close() !!}
+
+
 
 @endsection

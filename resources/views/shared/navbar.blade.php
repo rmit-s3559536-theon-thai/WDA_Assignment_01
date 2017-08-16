@@ -1,5 +1,8 @@
 <div class="container-fluid">
     <div class="row">
+        <div class="col-md-2">
+            <img class="img-responsive" src="{{asset('images/rmit_logo_01.png')}}" alt="RMIT Logo">
+        </div>
         <a href="http://www.rmit.edu.au">
             {{--<img class="img img-responsive" src="{{asset('images/rmit_logo_01.png')}}" alt="RMIT Logo">--}}
         </a>

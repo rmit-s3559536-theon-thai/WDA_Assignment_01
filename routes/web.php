@@ -28,5 +28,3 @@ Route::resource('its', 'itsController');
 Route::get('ticketview', function () {
     return view('ticket.view');
 })->name('ticketview');
-
-Route::resource('ItsCRUD','ItsCRUDController');

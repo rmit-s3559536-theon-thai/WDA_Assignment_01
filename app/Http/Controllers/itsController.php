@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-	
+
 use App\TicketDetails;
 use App\Comment;
 use Illuminate\Http\Request;
@@ -31,8 +31,25 @@ class itsController extends Controller {
         
     }
 
-    public function update ($id) {
-		return view('its.ticket');
+  
+
+    public function update(Request $request, $id) {
+        $this->validate($request, [
+            'comment' => 'required',
+            'status' => 'required',
+        ]);
+        
+
+
+        TicketDetails::find($id)->update($request->all());
+
+        $ticketComments = new Comment();
+        $ticketComments->comment = $request['comment'];
+        $ticketComments->ticket_details_id = $id;
+        $ticketComments->save();
+
+
+        return redirect()->route('its.index') ->with('success','Ticket status updated successfully');
     }
 
 }

@@ -11,8 +11,8 @@
             {{ Form::select('status', [
                'pending' => 'Pending',
                'inProgress' => 'In Progress',
-               'unresolve' => 'Unresolve',
-               'resolve' => 'Resolve'
+               'unresolved' => 'Unresolved',
+               'resolved' => 'Resolved'
                ]
             ) }}
         </div>
