@@ -35,8 +35,6 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-
-
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -44,15 +42,6 @@
                         <li><a href="#">Student</a></li>
                     </ul>
                 </li>
-
-
-
-
-
-
-                {{--<li class="{{ Request::is('its*') ? 'active' : '' }}">--}}
-                     {{--<a href="{{ route('its.index') }}">View All Tickets</a>--}}
-                {{--</li>--}}
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

@@ -3,70 +3,36 @@
 
 
 @section('content')
-{{--<div class="container">--}}
-    {{--<div class="content">--}}
-        {{--<div class="row">--}}
-            {{--<div class="col-md-8">--}}
-                {{--<img class="img-responsive img-rounded bld80Image" src="images/bld80.jpg"/>--}}
-            {{--</div>--}}
-            {{--<div class="col-md-4">--}}
-                {{--<p class="h4">RMIT university runs ITS to help students address IT issues. ITS office is placed on level 3 at building 80</p>--}}
-            {{--</div>--}}
-        {{--</div>--}}
-
-    {{--</div>--}}
-{{--</div>--}}
-
-<div class="container">
-    <h2>Welcome To ITS</h2>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-
-                <div class="item active">
-                    <img class="imgStyle" src="images/bld80.jpg" alt="Building 80" style="margin:auto;">
-                    {{--<div class="carousel-caption">--}}
-                    {{--<h3>Los Angeles</h3>--}}
-                    {{--<p>LA is always so much fun!</p>--}}
-                    {{--</div>--}}
-                </div>
-
-                <div class="item">
-                    <img class="imgStyle" src="images/its_image.jpg" alt="ITS poster" style="margin:auto;">
-                    {{--<div class="carousel-caption">--}}
-                    {{--<h3>Chicago</h3>--}}
-                    {{--<p>Thank you, Chicago!</p>--}}
-                    {{--</div>--}}
-                </div>
-
-                {{--<div class="item">--}}
-                {{--<img src="ny.jpg" alt="New York" style="width:100%;">--}}
-                {{--<div class="carousel-caption">--}}
-                {{--<h3>New York</h3>--}}
-                {{--<p>We love the Big Apple!</p>--}}
-                {{--</div>--}}
-                {{--</div>--}}
-
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
+    <div class="row bg-info" style="margin-top:-20px">
+        <div class="col-md-6 col-md-offset-1">
+            <img class="img-responsive" src="{{asset('images/bld80.jpg')}}" style="margin:10px 0px 10px 0px" />
         </div>
-</div>
+
+        <div class="col-md-4">
+            <p class="h3 text-center">Resolve your IT issues with ITS today!</p><br />
+            <p>Information Technology Services (ITS) provides RMIT University with information and communication technology in support of RMIT’s research, learning teaching and administrative activities.</p><br />
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <a class="btn btn-primary btn-group-justified btn-lg" href="{{ URL::to('ticket/create') }}">Request a Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:10px">
+        <div class="col-md-5 col-md-offset-1">
+            <p class="h3 text-center">Want to find out more about ITS?</p><br />
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <a class="btn btn-danger btn-group-justified btn-lg" href="{{ URL::to('faq') }}">Go to FAQ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <img class="img-responsive" src="{{ asset('images/its_image.jpg') }}" />
+        </div>
+    </div>
+
 @endsection
 
 
