@@ -21,7 +21,7 @@ class itsController extends Controller {
 
   
     public function edit($id) {
-        // get the nerd
+        // get the ticket detail
         $ticketDetail = TicketDetails::find($id);
 
 
@@ -51,5 +51,23 @@ class itsController extends Controller {
 
         return redirect()->route('its.index') ->with('success','Ticket status updated successfully');
     }
+
+
+
+    // Function for pulling and posting data within the same route
+    public function getTrackTicket () {
+        return view('its.trackTicket');
+    }
+
+    public function postTrackTicket (Request $request) {
+        $ticketID = $request['ticket_id'];
+
+        $ticketDetail = TicketDetails::find($ticketID);
+
+        return view('its.trackTicket', ['ticketDetail' => $ticketDetail]);
+
+    }   
+
+
 
 }

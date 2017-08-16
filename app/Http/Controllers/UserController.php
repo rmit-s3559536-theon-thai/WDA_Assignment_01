@@ -22,7 +22,6 @@ class UserController extends Controller
 
         //Redirect with success message
         return redirect()->route('ticket.create') ->with('success','User added successfully');
-
-        
     }
+
 }
