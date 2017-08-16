@@ -32,7 +32,7 @@ class TicketController extends Controller
 
         $ticketComments = new Comment();
         $ticketComments->comment = $allRequest['comment'];
-        $ticketComments->ticket_id = $ticket_details->id;
+        $ticketComments->ticket_details_id = $ticket_details->id;
         $ticketComments->save();
 
         /*
