@@ -27,7 +27,7 @@ class UserInfoFormRequest extends FormRequest
             //
             'fname' => 'required|max:30|alpha_dash',
             'lname' => 'required|max:30|alpha_dash',
-            'studentno' => 'required|regex:/^[s]{1}[0-9]{7}$/|unique:user_informations',
+            'studentno' => 'required|regex:/^[s]{1}[3]{1}[0-9]{6}$/|unique:user_informations',
             'email' => 'required|email|unique:user_informations',
         ];
     }

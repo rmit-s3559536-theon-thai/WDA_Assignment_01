@@ -100,8 +100,17 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'studentno' => [
+            'regex' => 'Your student number is wrong. Try again.',
+            'required' => 'The student number field is required.',
+        ],
+
+        'fname' => [
+            'required' => 'The first name field is required.',
+        ],
+
+        'lname' => [
+            'required' => 'The last name field is required.',
         ],
     ],
 
