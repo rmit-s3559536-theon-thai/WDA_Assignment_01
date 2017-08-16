@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Add New User</h2>
+            <h2>Request a Service</h2>
         </div>
     </div>
 </div>
@@ -59,7 +59,7 @@
 
 
 
-<button class="btn btn-primary" type="submit">Submit Ticket now</button>
+<button class="btn btn-primary" type="submit">Submit Ticket</button>
 
 {!! Form::close() !!}
 @endsection

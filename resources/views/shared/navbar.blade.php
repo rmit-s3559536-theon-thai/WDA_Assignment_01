@@ -39,7 +39,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li class="{{ Request::is('its*') ? 'active' : '' }}"><a href="{{ route('its.index') }}">Staff</a></li>
-                        <li><a href="#">Student</a></li>
+                        <li><a href="{{ URL::to('/') }}">Student</a></li>
                     </ul>
                 </li>
             </ul>

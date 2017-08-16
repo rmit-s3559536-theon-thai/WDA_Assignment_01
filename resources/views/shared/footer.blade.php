@@ -43,8 +43,8 @@
 
     <hr class="divider" />
     <div class="row">
-        <div class="col-md-3">
-            <p>&copy; 2017 Theon Thai, Minyoung Cho<p>
+        <div class="col-md col-md-offset-1">
+            <p>&copy; 2017 RMIT - Web Database Application Assignment 1; Theon Thai, Minyoung Cho<p>
         </div>
     </div>
 </footer>
