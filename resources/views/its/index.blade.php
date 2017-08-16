@@ -27,8 +27,8 @@
                         <tr>
                             <td>{{ $value->user->fname }}</td>
                             <td>{{ $value->user->lname }}</td>
-                            <td>OS : {{ $value->os }}</td>
-                            <td>Issue : {{ $value->issue }}</td> 
+                            <td>{{ $value->os }}</td>
+                            <td>{{ $value->issue }}</td>
                             <td>{{ $value->status }}</td> 
                             <td><a class="btn btn-primary" href="{{  URL::to('its/' . $value->id . '/edit') }}">Click Here</a></td>
                         </tr>

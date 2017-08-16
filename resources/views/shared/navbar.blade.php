@@ -1,14 +1,18 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2">
-            <img class="img-responsive" src="{{asset('images/rmit_logo_01.png')}}" alt="RMIT Logo">
-        </div>
-        <a href="http://www.rmit.edu.au">
-            {{--<img class="img img-responsive" src="{{asset('images/rmit_logo_01.png')}}" alt="RMIT Logo">--}}
-        </a>
-        <a href="{{url('/')}}">
-            {{--<img class="img img-responsive" src="{{asset('images/its_logo.png')}}" alt="ITS Logo">--}}
-        </a>
+        {{--<div class="col-md-1">--}}
+            {{--<a href="{{URL::to('http://www.rmit.edu.au')}}">--}}
+                {{--<img class="img-responsive" src="{{asset('images/rmit_logo_01.png')}}" alt="RMIT Logo">--}}
+            {{--</a>--}}
+        {{--</div>--}}
+
+        {{--<div class="col-md-1">--}}
+            {{--<a href="{{url('/')}}">--}}
+                {{--<img class="img-responsive" src="{{asset('images/its_logo.png')}}" alt="ITS Logo">--}}
+            {{--</a>--}}
+        {{--</div>--}}
+
+
     </div>
 </div>
 
