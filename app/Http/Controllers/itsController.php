@@ -14,9 +14,7 @@ class itsController extends Controller {
     public function index () {
     	
     	$ticketDetail = TicketDetails::all();
-
     	return view('its.index', ['ticketDetail' => $ticketDetail]);
-
     }
 
   

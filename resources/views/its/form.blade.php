@@ -9,10 +9,10 @@
         <div class="form-group">
             <strong>Status:</strong>
             {{ Form::select('status', [
-               'pending' => 'Pending',
-               'inProgress' => 'In Progress',
-               'unresolved' => 'Unresolved',
-               'resolved' => 'Resolved'
+               'Pending' => 'Pending',
+               'In Progress' => 'In Progress',
+               'Unresolved' => 'Unresolved',
+               'Resolved' => 'Resolved'
                ]
             ) }}
         </div>

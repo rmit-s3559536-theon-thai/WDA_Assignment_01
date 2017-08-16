@@ -63,6 +63,36 @@
                 </div>
             </div>
         </div>
+
+        <div class="panel-group">
+            <div class="panel panel-success">
+                {{-- Panel Heading --}}
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse4">What does ITS do?</a>
+                    </h4>
+                </div>
+                {{-- Panel Body --}}
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>ITS operates ICT services on behalf of RMIT students, staff and research partners. This includes the following:</p>
+                        <ol>
+                            <li>IT Strategy and Account management – incorporating enterprise architecture, strategic investment planning, demand management and account management</li>
+                            <li>IT Security and Risk management – incorporating IT security/ risk governance and control, forensics and investigations, security operations and security standards awareness</li>
+                            <li>Solution delivery – incorporating solution consulting, program and portfolio management, project management, business analysis, development, testing and support services</li>
+                            <li>End user services – incorporating the Service and Support Centre, IT Service Management, desktop, laptops, software, telephony, mobile phones, tablets and printing services</li>
+                            <li>Teaching, learning and collaboration – incorporating email and online collaboration, interactive learning spaces, lecture capture support, learning management, student portals</li>
+                            <li>Audio Visual services – incorporating AV events, loans equipment and video conferencing</li>
+                            <li>Research high performance computing and data storage</li>
+                            <li>Networks and application services – incorporating application hosting and support, core infrastructure management and wireless network access.</li>
+                        </ol>
+                    </div>
+                    {{--<div class="panel-footer">Panel Footer</div>--}}
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </div>
 @endsection
