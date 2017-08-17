@@ -22,11 +22,15 @@
 @if(isset($ticketDetail))
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			{{ $ticketDetail->id }}		
-			{{ $ticketDetail->issue }}
+			Ticket ID : {{ $ticketDetail->id }}
+			Issue : {{ $ticketDetail->issue }}
 		</div>
-	</div>	
+	</div>
+@else
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<p>THe ID does not exist in the database.</p>
+		</div>
+	</div>
 @endif
-
-
 @endsection
