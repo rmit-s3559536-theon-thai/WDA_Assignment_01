@@ -61,6 +61,9 @@ class itsController extends Controller {
         $ticketID = $request['ticket_id'];
 
         $ticketDetail = TicketDetails::find($ticketID);
+        if ($ticketDetail === null) {
+           // Flash  Msg goes in here.
+        }
 
         return view('its.trackTicket', ['ticketDetail' => $ticketDetail]);
 
