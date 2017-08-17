@@ -6,6 +6,7 @@ use App\TicketDetails;
 use App\Comment;
 use Illuminate\Http\Request;
 use App\UserInformation;
+use Session;
 
 
 
@@ -63,6 +64,8 @@ class itsController extends Controller {
         $ticketDetail = TicketDetails::find($ticketID);
         if ($ticketDetail === null) {
            // Flash  Msg goes in here.
+            Session::flash('notValidId', 'The ID does not exist in the database');
+            Session::flash('alert-class', 'alert-danger');
         }
 
         return view('its.trackTicket', ['ticketDetail' => $ticketDetail]);

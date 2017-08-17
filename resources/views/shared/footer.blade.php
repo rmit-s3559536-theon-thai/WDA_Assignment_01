@@ -1,39 +1,39 @@
 <footer class="panel-footer">
     <div class="row bg-faded">
-        <div class="col-md-2 col-md-offset-1">
-            <p class="text-center">Home</p>
-            <a class="text-center" href="{{URL::to('/')}}">Home</a>
+        <div class="col-md-2 col-md-offset-1" style="text-align: center;">
+            <p class="text-center h4">Home</p>
+            <a class="text-center" href="{{URL::to('/')}}" style="color:gray">Home</a>
         </div>
-        <div class="col-md-2">
-            <p class="text-center">FAQ</p>
-            <a class="text-center" href="{{URL::to('faq')}}">FAQ</a>
+        <div class="col-md-2" style="text-align: center;">
+            <p class="text-center h4">FAQ</p>
+            <a class="text-center" href="{{URL::to('faq')}}" style="color:gray">FAQ</a>
         </div>
-        <div class="col-md-2">
-            <p class="text-center">Creation</p>
-            <a class="text-center" href="{{URL::to('user/create')}}">Create User</a><br/>
-            <a class="text-center" href="{{URL::to('ticket/create')}}">Create ticket</a>
+        <div class="col-md-2" style="text-align: center;">
+            <p class="text-center h4">Creation</p>
+            <a class="text-center" href="{{URL::to('user/create')}}" style="color:gray">Create User</a><br/>
+            <a class="text-center" href="{{URL::to('ticket/create')}}" style="color:gray">Create ticket</a>
         </div>
-        <div class="col-md-2">
-            <p class="text-center">Login</p>
-            <a class="text-center" href="{{URL::to('its')}}">ITS Staff</a><br/>
-            <a class="text-center" href="{{URL::to('/')}}">Student</a>
+        <div class="col-md-2" style="text-align: center;">
+            <p class="text-center h4">Login</p>
+            <a class="text-center" href="{{URL::to('its')}}" style="color:gray">ITS Staff</a><br/>
+            <a class="text-center" href="{{URL::to('/')}}" style="color:gray">Student</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2" style="text-align: center;">
             <p class="text-center">Find RMIT on Social Media</p>
             <div class="row">
                 <div class="col-md-4 col-sm-2 col-xs-2">
-                    <a href="{{ URL::to('https://www.facebook.com/RMITuniversity/') }}">
+                    <a href="{{ URL::to('https://www.facebook.com/RMITuniversity/') }}" target="_blank">
                         <img class="img-responsive" src="{{ asset('images/facebook.png') }}" />
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-2 col-xs-2">
-                    <a href="{{ URL::to('https://twitter.com/RMIT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor') }}">
+                    <a href="{{ URL::to('https://twitter.com/RMIT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor') }}" target="_blank">
                         <img class="img-responsive" src="{{ asset('images/twitter.png') }}" />
                     </a>
 
                 </div>
                 <div class="col-md-4 col-sm-2 col-xs-2">
-                    <a href="{{ URL::to('https://www.instagram.com/rmituniversity/?hl=en') }}">
+                    <a href="{{ URL::to('https://www.instagram.com/rmituniversity/?hl=en') }}" target="_blank">
                         <img class="img-responsive" src="{{ asset('images/insta.png') }}" />
                     </a>
                 </div>

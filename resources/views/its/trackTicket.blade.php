@@ -3,6 +3,15 @@
 
 
 @section('content')
+
+@if(Session::has('notValidId'))
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('notValidId') }}</p>
+		</div>
+	</div>
+@endif
+
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
     	{!! Form::model(['action' => 'itsController@postTrackTicket']) !!}
@@ -29,13 +38,5 @@
 
 		</div>
 	</div>
-{{--@else--}}
-	{{--<div class="row">--}}
-		{{--<div class="col-md-6 col-md-offset-3">--}}
-			{{--<div class="jumbotron">--}}
-				{{--<p>THe ID does not exist in the database.</p>--}}
-			{{--</div>--}}
-		{{--</div>--}}
-	{{--</div>--}}
 @endif
 @endsection
