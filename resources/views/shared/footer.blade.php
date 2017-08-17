@@ -16,7 +16,7 @@
         <div class="col-md-2" style="text-align: center;">
             <p class="text-center h4">Login</p>
             <a class="text-center" href="{{URL::to('its')}}" style="color:gray">ITS Staff</a><br/>
-            <a class="text-center" href="{{URL::to('/')}}" style="color:gray">Student</a>
+            <a class="text-center" href="{{ url('trackTicket') }}" style="color:gray">Student</a>
         </div>
         <div class="col-md-2" style="text-align: center;">
             <p class="text-center">Find RMIT on Social Media</p>

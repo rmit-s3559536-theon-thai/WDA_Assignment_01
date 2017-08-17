@@ -1,5 +1,5 @@
 @extends('layout.master') 
-@section('title', 'home') 
+@section('title', 'Find Ticket')
 
 
 @section('content')
