@@ -1,17 +1,3 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-2">
-            <img class="img-responsive" src="{{asset('images/rmit_logo_01.png')}}" alt="RMIT Logo">
-        </div>
-        <a href="http://www.rmit.edu.au">
-            {{--<img class="img img-responsive" src="{{asset('images/rmit_logo_01.png')}}" alt="RMIT Logo">--}}
-        </a>
-        <a href="{{url('/')}}">
-            {{--<img class="img img-responsive" src="{{asset('images/its_logo.png')}}" alt="ITS Logo">--}}
-        </a>
-    </div>
-</div>
-
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
