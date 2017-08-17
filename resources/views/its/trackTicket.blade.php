@@ -23,7 +23,7 @@
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
 			<div class="jumbotron">
-				<p>Ticket ID : {{ $ticketDetail->id }}</p><br />
+				<p>Ticket ID : {{ $ticketDetail->id }}</p>
 				<p>Issue : {{ $ticketDetail->issue }}</p>
 			</div>
 

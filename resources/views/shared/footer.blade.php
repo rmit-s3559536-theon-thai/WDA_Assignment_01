@@ -21,18 +21,18 @@
         <div class="col-md-2">
             <p class="text-center">Find RMIT on Social Media</p>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-2 col-xs-2">
                     <a href="{{ URL::to('https://www.facebook.com/RMITuniversity/') }}">
                         <img class="img-responsive" src="{{ asset('images/facebook.png') }}" />
                     </a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-2 col-xs-2">
                     <a href="{{ URL::to('https://twitter.com/RMIT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor') }}">
                         <img class="img-responsive" src="{{ asset('images/twitter.png') }}" />
                     </a>
 
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-2 col-xs-2">
                     <a href="{{ URL::to('https://www.instagram.com/rmituniversity/?hl=en') }}">
                         <img class="img-responsive" src="{{ asset('images/insta.png') }}" />
                     </a>
