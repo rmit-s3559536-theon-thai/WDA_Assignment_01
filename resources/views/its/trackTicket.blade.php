@@ -29,13 +29,13 @@
 
 		</div>
 	</div>
-@else
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-			<div class="jumbotron">
-				<p>THe ID does not exist in the database.</p>
-			</div>
-		</div>
-	</div>
-@endif
+{{--@else--}}
+	{{--<div class="row">--}}
+		{{--<div class="col-md-6 col-md-offset-3">--}}
+			{{--<div class="jumbotron">--}}
+				{{--<p>THe ID does not exist in the database.</p>--}}
+			{{--</div>--}}
+		{{--</div>--}}
+	{{--</div>--}}
+{{--@endif--}}
 @endsection
