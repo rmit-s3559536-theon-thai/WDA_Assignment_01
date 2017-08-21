@@ -1,5 +1,5 @@
 <footer class="panel-footer">
-    <div class="row bg-faded">
+    <div class="row">
         <div class="col-md-2 col-md-offset-1" style="text-align: center;">
             <p class="text-center h4">Home</p>
             <a class="text-center" href="{{URL::to('/')}}" style="color:gray">Home</a>
