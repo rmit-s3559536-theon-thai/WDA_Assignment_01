@@ -22,6 +22,7 @@
     <div class="row" style="margin-top:10px">
         <div class="col-md-5 col-md-offset-1">
             <p class="h3 text-center">Want to find out more about ITS?</p><br />
+            <p>RMIT students as well as staff can get support by ITS. Request any issue and resolve it as soon as possible!</p><br />
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <a class="btn btn-danger btn-group-justified btn-lg" href="{{ URL::to('faq') }}">Go to FAQ</a>
