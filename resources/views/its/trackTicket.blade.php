@@ -34,8 +34,12 @@
 			<div class="jumbotron">
 				<p>Ticket ID : {{ $ticketDetail->id }}</p>
 				<p>Issue : {{ $ticketDetail->issue }}</p>
+				@foreach ($ticketDetail->comments as $comments)
+					<div class="well">
+						{{ $comments->comment }}
+					</div>
+				@endforeach
 			</div>
-
 		</div>
 	</div>
 @endif
