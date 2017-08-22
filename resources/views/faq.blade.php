@@ -26,63 +26,16 @@
             <h2>Frequently Asked Questions</h2>
 
             <div class="panel-group">
-                <div class="panel panel-primary">
-                    {{-- Panel Heading --}}
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse1">Where can I change my rmit account password?</a>
-                        </h4>
-                    </div>
-                    {{-- Panel Body --}}
-                    <div id="collapse1" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <p>You can change your password through the given link below</p>
-                            <a class="btn btn-primary" href="https://www.rmit.edu.au/students/support-and-facilities/it-services-for-students/password-assistance" target="_blank">Click here to change password</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-info">
-                    {{-- Panel Heading --}}
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse2">I cannot connect to RMIT wi-fi.</a>
-                        </h4>
-                    </div>
-                    {{-- Panel Body --}}
-                    <div id="collapse2" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <p>You should request a ticket through this link with specific description.</p>
-                            <a class="btn btn-info" href="{{ URL::to('/ticket/create') }}">Request a ticket</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="panel panel-danger">
-                    {{-- Panel Heading --}}
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse3">I want to install an application into RMIT MyDesktop.</a>
-                        </h4>
-                    </div>
-                    {{-- Panel Body --}}
-                    <div id="collapse3" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <p>You should request a ticket to get permission for installing the application you want to use on MyDesktop.</p>
-                            <a class="btn btn-danger" href="{{ URL::to('/ticket/create') }}">Request a ticket</a>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="panel panel-success">
                     {{-- Panel Heading --}}
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#collapse4">What does ITS do?</a>
+                            <a data-toggle="collapse" href="#collapse1">What does ITS do?</a>
                         </h4>
                     </div>
                     {{-- Panel Body --}}
-                    <div id="collapse4" class="panel-collapse collapse">
+                    <div id="collapse1" class="panel-collapse collapse">
                         <div class="panel-body">
                             <p>ITS operates ICT services on behalf of RMIT students, staff and research partners. This includes the following:</p>
                             <ol>
@@ -98,6 +51,73 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="panel panel-primary">
+                    {{-- Panel Heading --}}
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse2">Where can I change my rmit account password?</a>
+                        </h4>
+                    </div>
+                    {{-- Panel Body --}}
+                    <div id="collapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>You can change your password through the given link below</p>
+                            <a class="btn btn-primary" href="https://www.rmit.edu.au/students/support-and-facilities/it-services-for-students/password-assistance" target="_blank">Click here</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-info">
+                    {{-- Panel Heading --}}
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse3">I cannot connect to RMIT wi-fi.</a>
+                        </h4>
+                    </div>
+                    {{-- Panel Body --}}
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>You should request a ticket through this link with specific description.</p>
+                            <a class="btn btn-info" href="{{ URL::to('/ticket/create') }}">Request a ticket</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-danger">
+                    {{-- Panel Heading --}}
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse4">I want to install an application into RMIT MyDesktop.</a>
+                        </h4>
+                    </div>
+                    {{-- Panel Body --}}
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>You should request a ticket to get permission for installing the application you want to use on MyDesktop.</p>
+                            <a class="btn btn-danger" href="{{ URL::to('/ticket/create') }}">Request a ticket</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-warning">
+                    {{-- Panel Heading --}}
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#collapse5">How can I book a study room?</a>
+                        </h4>
+                    </div>
+                    {{-- Panel Body --}}
+                    <div id="collapse5" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>In order to book a study room, you should go to the link below, then select the room and check the availability of the room.</p>
+                            <a class="btn btn-warning" href="{{ URL::to('https://bookit.rmit.edu.au/cire/login.aspx') }}">Click here</a>
+
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
 
