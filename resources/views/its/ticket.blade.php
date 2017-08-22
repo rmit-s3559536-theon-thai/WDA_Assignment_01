@@ -3,7 +3,7 @@
 @section('content')
     
     <div class="row">
-        <div class="col-lg-12 margin-tb">
+        <div class="col-lg-8 col-lg-offset-2">
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-8 col-lg-offset-2">
             <h4>Comments</h4>
             @foreach ($ticketDetail->comments as $comments)
             <div class="well">
@@ -42,7 +42,12 @@
 
 
     {!! Form::model($ticketDetail, ['method' => 'PATCH','route' => ['its.update', $ticketDetail->id]]) !!}
-        @include('its.form')
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                @include('its.form')
+            </div>
+        </div>
+        
     {!! Form::close() !!}
 
 

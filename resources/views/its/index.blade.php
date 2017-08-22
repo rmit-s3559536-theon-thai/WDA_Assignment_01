@@ -2,14 +2,14 @@
 @section('title', 'View all Tickets')
 @section('content')
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-8 col-lg-offset-2">
             <h2>Submitted Tickets Status</h2>
         </div>
     </div>
     <br/>
     <br/>
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-8 col-lg-offset-2">
             <div>
                 <table class="table table-striped">
                     <thead>

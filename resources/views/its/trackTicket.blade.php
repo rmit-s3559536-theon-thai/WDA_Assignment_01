@@ -31,15 +31,66 @@
 @if(isset($ticketDetail))
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
-			<div class="jumbotron">
-				<p>Ticket ID : {{ $ticketDetail->id }}</p>
-				<p>Issue : {{ $ticketDetail->issue }}</p>
-				@foreach ($ticketDetail->comments as $comments)
-					<div class="well">
-						{{ $comments->comment }}
-					</div>
-				@endforeach
+			<h3>Ticket Information</h3>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Ticket ID</h3>
+				</div>
+				<div class="panel-body">
+					{{ $ticketDetail->id }}
+				</div>
 			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Status</h3>
+				</div>
+				<div class="panel-body">
+					{{ $ticketDetail->status }}
+				</div>
+			</div>
+
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Operating System</h3>
+				</div>
+				<div class="panel-body">
+					{{ $ticketDetail->os }}
+				</div>
+			</div>
+			
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">Issue</h3>
+				</div>
+				<div class="panel-body">
+					{{ $ticketDetail->issue }}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+			<!-- Default panel contents -->
+			<div class="panel-heading">Comments</div>
+				
+				<!-- List group -->
+				<ul class="list-group">
+					@foreach ($ticketDetail->comments as $comments)
+						<li class="list-group-item">{{ $comments->comment }}</li>
+					@endforeach
+				</ul>
+			</div>
+
+
+			
 		</div>
 	</div>
 @endif
