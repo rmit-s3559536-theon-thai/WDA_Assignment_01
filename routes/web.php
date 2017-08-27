@@ -21,11 +21,11 @@ Route::get('faq', 'staticPagesController@faq');
 //CRUD
 Route::resource('user', 'UserController');
 Route::resource('ticket', 'TicketController');
-Route::resource('its', 'itsController');
+Route::resource('its', 'ITSController');
 
 //Form submission for get and post to the same url
-Route::get('trackTicket', 'itsController@getTrackTicket'); 
-Route::post('trackTicket', 'itsController@postTrackTicket'); 
+Route::get('trackTicket', 'ITSController@getTrackTicket');
+Route::post('trackTicket', 'ITSController@postTrackTicket');
 
 
 

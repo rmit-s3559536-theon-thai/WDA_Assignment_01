@@ -10,7 +10,7 @@ use Session;
 
 
 
-class itsController extends Controller {
+class ITSController extends Controller {
   
     public function index () {
     	

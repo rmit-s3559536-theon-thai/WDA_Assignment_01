@@ -14,7 +14,7 @@
 
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
-    	{!! Form::model(['action' => 'itsController@postTrackTicket']) !!}
+    	{!! Form::model(['action' => 'ITSController']) !!}
 	        <div class="form-group">
 
                 {!! Form::label('ticket_id', 'Ticket ID') !!}
