@@ -33,3 +33,6 @@ Route::post('trackTicket', 'ITSController@postTrackTicket');
 Route::get('ticketview', function () {
     return view('ticket.view');
 })->name('ticketview');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

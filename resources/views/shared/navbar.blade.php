@@ -19,35 +19,53 @@
                 <li class="{{ Request::is('faq') ? 'active' : '' }}">
                     <a href="{{ url('faq') }}">FAQ</a>
                 </li>
+                {{--<li class="{{ Request::is('user*') ? 'active' : '' }}">--}}
+                     {{--<a href="{{ route('user.create') }}">Create User</a>--}}
+                {{--</li>--}}
 
-                <li class="{{ Request::is('user*') ? 'active' : '' }}">
-                     <a href="{{ route('user.create') }}">Create User</a>
-                </li>
-
-                <li class="{{ Request::is('ticket*') ? 'active' : '' }}">
-                     <a href="{{ route('ticket.create') }}">Create Ticket</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-
-
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li class="{{ Request::is('its*') ? 'active' : '' }}"><a href="{{ route('its.index') }}">Staff</a></li>
-                        <li><a href="{{ url('trackTicket') }}">Student</a></li>
-                    </ul>
-                </li>
-
-
-
-
-
-
-                {{--<li class="{{ Request::is('its*') ? 'active' : '' }}">--}}
-                     {{--<a href="{{ route('its.index') }}">View All Tickets</a>--}}
+                {{--<li class="{{ Request::is('ticket*') ? 'active' : '' }}">--}}
+                     {{--<a href="{{ route('ticket.create') }}">Create Ticket</a>--}}
                 {{--</li>--}}
             </ul>
+
+            <!-- Authentication Links -->
+            @if (Auth::guest())
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="glyphicon glyphicon-user" href="{{ route('login') }}">Login</a></li>
+                    <li><a class="glyphicon glyphicon-plus" href="{{ route('register') }}">Register</a></li>
+                </ul>
+            @else
+                <ul class="nav navbar-nav">
+                    <li class="{{ Request::is('user*') ? 'active' : '' }}">
+                        <a href="{{ route('user.create') }}">Create User</a>
+                    </li>
+                    <li class="{{ Request::is('ticket*') ? 'active' : '' }}">
+                        <a href="{{ route('ticket.create') }}">Create Ticket</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Welcome, {{ Auth::user()->name }} <span class="caret"></span>
+                        </a>
+
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            @endif
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

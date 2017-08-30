@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <h2>Your request is submitted, {!! Session::get('ticket')->user->fname !!}!</h2>
+            <h2>Your request is submitted, {{ Auth::user()->name }}!</h2>
         </div>
     </div>
     @if(!empty(Session::get('ticket')))

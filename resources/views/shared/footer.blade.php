@@ -8,11 +8,15 @@
             <p class="text-center h4">FAQ</p>
             <a class="text-center" href="{{URL::to('faq')}}" style="color:gray">FAQ</a>
         </div>
-        <div class="col-md-2" style="text-align: center;">
-            <p class="text-center h4">Creation</p>
-            <a class="text-center" href="{{URL::to('user/create')}}" style="color:gray">Create User</a><br/>
-            <a class="text-center" href="{{URL::to('ticket/create')}}" style="color:gray">Create ticket</a>
-        </div>
+
+        @if (Auth::check())
+            <div class="col-md-2" style="text-align: center;">
+                <p class="text-center h4">Creation</p>
+                <a class="text-center" href="{{URL::to('user/create')}}" style="color:gray">Create User</a><br/>
+                <a class="text-center" href="{{URL::to('ticket/create')}}" style="color:gray">Create ticket</a>
+            </div>
+        @endif
+
         <div class="col-md-2" style="text-align: center;">
             <p class="text-center h4">Login</p>
             <a class="text-center" href="{{URL::to('its')}}" style="color:gray">ITS Staff</a><br/>
