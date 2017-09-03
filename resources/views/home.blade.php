@@ -3,7 +3,7 @@
 
 
 @section('content')
-    <div class="row bg-info" style="margin-top:-20px">
+    <div class="row" style="margin-top:-20px">
         <div class="col-md-6 col-md-offset-1">
             <img class="img-responsive" src="{{asset('images/bld80.jpg')}}" style="margin:10px 0px 10px 0px" />
         </div>
