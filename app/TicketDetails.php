@@ -8,7 +8,7 @@ class TicketDetails extends Model {
 	protected $fillable = [ 'os', 'issue', 'status'];
 
 	public function user () {
-        return $this->belongsTo('App\UserInformation');
+        return $this->belongsTo('App\User');
     }
 
     public function comments() {

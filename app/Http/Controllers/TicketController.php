@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\TicketDetails;
 use App\Comment;
 use Illuminate\Http\Request;
-use App\UserInformation;
+use App\User;
 use App\Http\Requests\TicketFormRequest;
 
 
@@ -14,7 +14,7 @@ class TicketController extends Controller
 {
     
 	public function create() {
-        $users = UserInformation::all();
+        $users = User::all();
         return view('ticket.create', ['users' => $users]);
     }
 
