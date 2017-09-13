@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\TicketDetails;
 use App\Comment;
 use Illuminate\Http\Request;
-use App\UserInformation;
+use App\User;
 use Session;
 
 

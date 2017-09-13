@@ -30,8 +30,7 @@ class LoginController extends Controller
      * Change this value to e.g. ticket submit page
      * if wanting to redirect after logging in
      */
-    protected $redirectTo = 'home';
-//    protected $redirectTo = 'ticket/create';
+    protected $redirectTo = 'ticket/create';
 
     /**
      * Create a new controller instance.
