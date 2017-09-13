@@ -13,6 +13,18 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+
+Route::get('/user', function (Request $request) {
     return $request->user();
+})->middleware('auth:api');
+
+Route::group(['middleware' => 'auth.basic'], function () {
+    Route::get('/tickets', 'TicketAPIController@index');
+    Route::get('/tickets/{id}', 'TicketAPIController@show');
+    Route::post('/tickets', 'TicketAPIController@store');
+    Route::put('/tickets/{id}', 'TicketAPIController@update');
+    Route::delete('/tickets/{id}', 'TicketAPIController@destroy');
 });
