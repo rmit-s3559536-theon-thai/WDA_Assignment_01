@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\TicketDetails;
+use App\User;
+
 use Illuminate\Routing\ResponseFactory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -41,10 +43,12 @@ class TicketAPIController extends Controller
     public function store(Request $request)
     {
         $ticket = new TicketDetails;
+
         $ticket->os = $request->input('os');
         $ticket->issue = $request->input('issue');
         $ticket->status = $request->input('status');
-        $ticket->comments->comment = $request->input('comment');
+//        $ticket->comments->comment = $request['comment'];
+        $ticket->user_id = $request['user_id'];
 
         if ($ticket->save()) {
             return $ticket;
@@ -60,10 +64,12 @@ class TicketAPIController extends Controller
         }
 
         $ticket = new TicketDetails;
+
         $ticket->os = $request->input('os');
         $ticket->issue = $request->input('issue');
         $ticket->status = $request->input('status');
-        $ticket->comments->comment = $request->input('comment');
+        $ticket->comments->comment = $request['comment'];
+        $ticket->user_id = $request['user_id'];
 
         if ($ticket->save()) {
             return $ticket;
