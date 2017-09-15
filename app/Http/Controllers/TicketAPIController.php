@@ -63,7 +63,7 @@ class TicketAPIController extends Controller
             throw new HttpException(400, "Invalid id");
         }
 
-        $ticket = new TicketDetails;
+        $ticket = TicketDetails::find($id);
 
         $ticket->os = $request->input('os');
         $ticket->issue = $request->input('issue');
