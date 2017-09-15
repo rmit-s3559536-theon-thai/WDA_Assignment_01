@@ -12,10 +12,11 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class TicketAPIController extends Controller
 {
-    public function index()
+    public function index(TicketDetails $ticket)
     {
-        $tickets = TicketDetails::paginate(10);
+//        $tickets = TicketDetails::paginate(10);
 
+        $tickets = $ticket->with('comments')->get();
         if (!$tickets) {
             throw new HttpException(400, "Invalid data");
         }
