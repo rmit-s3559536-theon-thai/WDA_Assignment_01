@@ -18,6 +18,11 @@ class TicketController extends Controller
         return view('ticket.create', ['users' => $users]);
     }
 
+    public function fetch() {
+        $tickets = Tickets::orderBy('created_at', 'DESC')->get();
+
+        return response()->json($tickets);
+    }
 
     public function store(TicketFormRequest $request) {
 

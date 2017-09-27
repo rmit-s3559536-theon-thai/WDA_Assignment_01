@@ -48,7 +48,7 @@ class TicketAPIController extends Controller
         $ticket->os = $request->input('os');
         $ticket->issue = $request->input('issue');
         $ticket->status = $request->input('status');
-//        $ticket->comments->comment = $request['comment'];
+        $ticket->comments->comment = $request['comment'];
         $ticket->user_id = $request['user_id'];
 
         if ($ticket->save()) {
@@ -69,7 +69,7 @@ class TicketAPIController extends Controller
         $ticket->os = $request->input('os');
         $ticket->issue = $request->input('issue');
         $ticket->status = $request->input('status');
-        $ticket->comments->comment = $request['comment'];
+        $ticket->comments->comment = $request->input('comment');
         $ticket->user_id = $request['user_id'];
 
         if ($ticket->save()) {
