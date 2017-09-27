@@ -21,7 +21,7 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
 
-Route::group(['middleware' => 'auth.basic'], function () {
+Route::group(['middleware' => 'cors'], function () {
     Route::get('/tickets', 'TicketAPIController@index');
     Route::get('/tickets/{id}', 'TicketAPIController@show');
     Route::post('/tickets', 'TicketAPIController@store');
