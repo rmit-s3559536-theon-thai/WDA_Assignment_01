@@ -48,6 +48,8 @@ class TicketAPIController extends Controller
         $ticket->os = $request->input('os');
         $ticket->issue = $request->input('issue');
         $ticket->status = $request->input('status');
+        $ticket->priority = $request['priority'];
+        $ticket->escLevel = $request['escLevel'];
         $ticket->comments->comment = $request['comment'];
         $ticket->user_id = $request['user_id'];
 
@@ -69,6 +71,8 @@ class TicketAPIController extends Controller
         $ticket->os = $request->input('os');
         $ticket->issue = $request->input('issue');
         $ticket->status = $request->input('status');
+        $ticket->priority = $request->input('priority');
+        $ticket->escLevel = $request->input('escLevel');
         $ticket->comments->comment = $request->input('comment');
         $ticket->user_id = $request['user_id'];
 
