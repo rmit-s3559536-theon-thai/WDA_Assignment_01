@@ -20,7 +20,7 @@ class CreateTicketDetailsTable extends Migration
             $table->string('issue');
             $table->string('status');
             $table->string('priority');
-            $table->integer('escLevel');
+            $table->string('escLevel');
             $table->timestamps();
         });
 
