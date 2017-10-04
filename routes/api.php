@@ -25,6 +25,8 @@ Route::group(['middleware' => 'cors'], function () {
     Route::get('/tickets', 'TicketAPIController@index');
     Route::get('/tickets/{id}', 'TicketAPIController@show');
     Route::post('/tickets', 'TicketAPIController@store');
-    Route::put('/tickets/{id}', 'TicketAPIController@update');
+    //Route::put('/tickets/{id}', 'TicketAPIController@update');
+    Route::put('/tickets/{id}', 'TicketAPIController@updateEscPriLvl');
+    
     Route::delete('/tickets/{id}', 'TicketAPIController@destroy');
 });

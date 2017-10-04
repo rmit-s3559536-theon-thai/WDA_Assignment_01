@@ -26,3 +26,11 @@ After that is done, copy the generated key and paste it into
 ```
 APP_KEY=
 ```
+
+The steps of migration
+
+```
+php artisan migrate 
+
+php artisan migrate --path=database/migrations/user_migration
+```

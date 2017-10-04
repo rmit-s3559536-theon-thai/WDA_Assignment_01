@@ -48,7 +48,9 @@ class TicketAPIController extends Controller
         $ticket->os = $request->input('os');
         $ticket->issue = $request->input('issue');
         $ticket->status = $request->input('status');
-//        $ticket->comments->comment = $request['comment'];
+        $ticket->priority = $request['priority'];
+        $ticket->escLevel = $request['escLevel'];
+        $ticket->comments->comment = $request['comment'];
         $ticket->user_id = $request['user_id'];
 
         if ($ticket->save()) {
@@ -69,7 +71,9 @@ class TicketAPIController extends Controller
         $ticket->os = $request->input('os');
         $ticket->issue = $request->input('issue');
         $ticket->status = $request->input('status');
-        $ticket->comments->comment = $request['comment'];
+        $ticket->priority = $request->input('priority');
+        $ticket->escLevel = $request->input('escLevel');
+        $ticket->comments->comment = $request->input('comment');
         $ticket->user_id = $request['user_id'];
 
         if ($ticket->save()) {
@@ -78,6 +82,25 @@ class TicketAPIController extends Controller
 
         throw new HttpException(400, "Invalid data");
     }
+
+    public function updateEscPriLvl(Request $request, $id)
+    {
+        if (!$id) {
+            throw new HttpException(400, "Invalid id");
+        }
+
+        $ticket = TicketDetails::find($id);
+        $ticket->priority = $request['priority'];
+        $ticket->escLevel = $request['escLevel'];
+
+        if ($ticket->save()) {
+            return $ticket;
+        }
+
+        throw new HttpException(400, "Invalid data");
+    }
+
+
 
     public function destroy($id)
     {

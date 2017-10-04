@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class TicketDetails extends Model {
-	protected $fillable = [ 'os', 'issue', 'status'];
+	protected $fillable = [ 'os', 'issue', 'status', 'priority', 'escLevel'];
 
     protected $table = 'ticket_details';
 
