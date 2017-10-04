@@ -14,6 +14,7 @@ class TicketDetailsTableSeeder extends Seeder
     {
         for ($i=0;$i<20;$i++) {
             TicketDetails::create(array(
+                'user_id' => 6,
                 'os' => 'iOS',
                 'issue' => 'test '.$i,
                 'status' => 'pending',
