@@ -81,8 +81,8 @@
             <a href="{{ route('login') }}">Login</a>
             <a href="{{ route('register') }}">Register</a>
         @else
-            <a href="{{ route('user.create') }}">Create User</a>
             <a href="{{ route('ticket.create') }}">Create Ticket</a>
+            <a href="{{ url('trackTicket') }}">Find My Ticket</a>
         @endif
     </div>
 </div>
@@ -94,8 +94,8 @@
         <div class="col-md-2 col-md-offset-9">
             <div class="navbar navbar-right">
                 @if (Auth::check())
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        Welcome, {{ Auth::user()->name }} <span class="caret"></span>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="text-decoration: none">
+                        <span style="font-size: 30px;color:rosybrown">Welcome, {{ Auth::user()->name }}</span> <span class="caret"></span>
                     </a>
 
                     <ul class="dropdown-menu" role="menu">

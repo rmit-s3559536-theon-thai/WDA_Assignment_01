@@ -83,8 +83,12 @@
 				
 				<!-- List group -->
 				<ul class="list-group">
-					@foreach ($ticketDetail->comments as $comments)
-						<li class="list-group-item">{{ $comments->comment }}</li>
+					@foreach ($ticketDetail->comments as $key => $comments)
+						@if ($key === 0)
+							<li class="list-group-item">My initial Comment: {{ $comments->comment }}</li>
+						@else
+							<li class="list-group-item">Technician: {{ $comments->comment }}</li>
+						@endif
 					@endforeach
 				</ul>
 			</div>
