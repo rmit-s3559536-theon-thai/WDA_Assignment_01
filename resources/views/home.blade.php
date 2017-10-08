@@ -3,11 +3,11 @@
 
 
 @section('content')
-<div class="row">
-    <div class="col-md-4 col-md-offset-4 text-center">
-        <p class="headingFont">ITS SERVICE</p>
+    <div class="row" style="margin: 50px 0 150px 0">
+        <div class="col-md-6 col-md-offset-3 text-center">
+            <p class="headingFont">RMIT ITS SERVICE</p>
+        </div>
     </div>
-</div>\
 @endsection
 
 

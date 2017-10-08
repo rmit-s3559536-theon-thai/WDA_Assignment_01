@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ asset('css/sharedStyle.css') }}">
 
     {{-- font family --}}
-    <link href="https://fonts.googleapis.com/css?family=Frijole|Yeseva+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

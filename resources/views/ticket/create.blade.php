@@ -6,7 +6,7 @@
 <div class="row">
     <div class="col-lg-6 col-lg-offset-3 margin-tb">
         <div class="pull-left">
-            <h2>Request a Service</h2>
+            <h2 class="headingFont">Request a Service</h2>
         </div>
     </div>
 </div>
@@ -38,7 +38,7 @@
         {!! Form::open(['action' => 'TicketController@store']) !!}
 
             <div class="form-group">
-                {!! Form::Label('user', 'User') !!}
+                {!! Form::Label('user', 'User ID', ['style' => 'color: white']) !!}
                 {{--<select class="form-control" name="user_id">--}}
                     {{--@foreach($users as $user)--}}
                     {{--<option value="{{$user->id}}">{{$user->fname}} {{$user->lname}}</option>--}}
@@ -49,17 +49,17 @@
             </div>
 
             <div class="form-group">
-                {!! Form::label('os', 'Operating System') !!}
+                {!! Form::label('os', 'Operating System', ['style' => 'color: white']) !!}
                 {!! Form::text('os', '', ['class' => 'form-control']) !!}
             </div>
 
             <div class="form-group">
-                {!! Form::label('issue', 'Issue') !!}
+                {!! Form::label('issue', 'Issue', ['style' => 'color: white']) !!}
                 {!! Form::text('issue', '', ['class' => 'form-control']) !!}
             </div>
 
             <div class="form-group">
-                {!! Form::label('comment', 'Comments') !!}
+                {!! Form::label('comment', 'Comments', ['style' => 'color: white']) !!}
                 {!! Form::text('comment', '', ['class' => 'form-control']) !!}
             </div>
 

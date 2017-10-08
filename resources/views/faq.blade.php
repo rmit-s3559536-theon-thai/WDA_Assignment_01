@@ -116,7 +116,7 @@
                 </div>
             </div>
 
-            <div class="col-md-4" style="margin-bottom:10px">
+            <div class="col-md-4">
                 <div class="text-center subheadingFont">General Queries</div>
                 <div class="row">
                     <div class="col-md-3">

@@ -30,12 +30,13 @@
                         {{--<img class="img-responsive" src="{{ asset('images/facebook.png') }}" />--}}
                     {{--</a>--}}
                 {{--</div>--}}
+
                 {{--<div class="col-md-4 col-sm-2 col-xs-2">--}}
                     {{--<a href="{{ URL::to('https://twitter.com/RMIT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor') }}" target="_blank">--}}
                         {{--<img class="img-responsive" src="{{ asset('images/twitter.png') }}" />--}}
                     {{--</a>--}}
-
                 {{--</div>--}}
+
                 {{--<div class="col-md-4 col-sm-2 col-xs-2">--}}
                     {{--<a href="{{ URL::to('https://www.instagram.com/rmituniversity/?hl=en') }}" target="_blank">--}}
                         {{--<img class="img-responsive" src="{{ asset('images/insta.png') }}" />--}}

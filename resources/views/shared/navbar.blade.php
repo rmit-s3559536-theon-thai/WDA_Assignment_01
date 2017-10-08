@@ -90,12 +90,11 @@
 <div class="container-fluid">
 
     <div class="row">
-
-        <div class="col-md-2 col-md-offset-9">
+        <div class="col-md-4 col-md-offset-7">
             <div class="navbar navbar-right">
                 @if (Auth::check())
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="text-decoration: none">
-                        <span style="font-size: 30px;color:rosybrown">Welcome, {{ Auth::user()->name }}</span> <span class="caret"></span>
+                        <span style="font-size: 30px;color:white">Welcome, {{ Auth::user()->name }}</span> <span class="caret"></span>
                     </a>
 
                     <ul class="dropdown-menu" role="menu">
@@ -116,7 +115,7 @@
         </div>
 
         <div class="col-md-1">
-            <span class="navbar navbar-right" style="font-size:40px;cursor:pointer;color:rosybrown" onclick="openNav()">&#9776;</span>
+            <span class="navbar navbar-right" style="font-size:40px;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
         </div>
     </div>
 

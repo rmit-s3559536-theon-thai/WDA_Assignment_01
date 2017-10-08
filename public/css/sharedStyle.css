@@ -1,3 +1,15 @@
+body {
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 
 /* Overlay navbar style */
 
@@ -8,7 +20,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #411c0e;
+    background-color: #333333;
     opacity: 0.9;
     overflow-y: hidden;
     transition: 0.5s;
@@ -26,7 +38,7 @@
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: darkgray;
     display: block;
     transition: 0.3s;
 }
@@ -52,34 +64,28 @@
     }
 }
 
-.backgroundImage {
-    background-image:url('../images/bg.jpg');
-    background-attachment:fixed;
-    background-size:100%;
-    background-repeat:no-repeat;
-}
+/*.backgroundImage {*/
+    /*background-image:url('../images/bg.jpg');*/
+    /*background-attachment:fixed;*/
+    /*background-size:100%;*/
+    /*background-repeat:no-repeat;*/
+/*}*/
 
 /* Font declaration */
 .headingFont {
     font-size:50px;
-    color:rosybrown;
-    font-family: 'Frijole', cursive;
+    color:white;
+    font-family: 'Merriweather', serif;
 }
 
 .subheadingFont {
     font-size:35px;
-    color:saddlebrown;
-    font-family: 'Frijole', cursive;
+    color:whitesmoke;
+    font-family: 'Merriweather', serif;
 }
 
 .bodyFont {
     font-size: 20px;
-    color:brown;
-    font-family: 'Yeseva One', cursive;
-}
-
-.contentsTitleFont {
-    font-size:35px;
-    color:saddlebrown;
-    font-family: 'Frijole', cursive;
+    color:ghostwhite;
+    font-family: 'Merriweather', serif;
 }

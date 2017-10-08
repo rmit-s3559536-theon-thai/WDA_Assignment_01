@@ -17,7 +17,7 @@
     	{!! Form::model(['action' => 'ITSController']) !!}
 	        <div class="form-group">
 
-                {!! Form::label('ticket_id', 'Ticket ID') !!}
+                {!! Form::label('ticket_id', 'Ticket ID', ['style' => 'color:white']) !!}
     			{!! Form::text('ticket_id', '', ['class' => 'form-control']) !!}
 	        </div>
 	        <div class="form-group">
@@ -31,7 +31,7 @@
 @if(isset($ticketDetail))
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
-			<h3>Ticket Information</h3>
+			<h3 class="bodyFont">Ticket Information</h3>
 		</div>
 	</div>
 	<div class="row">
