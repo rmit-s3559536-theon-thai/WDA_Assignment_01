@@ -1,3 +1,19 @@
+/* html and footer styling for sticking footer at the bottom */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+footer {
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /*height: 100px;*/
+    width: 100%;
+    overflow:hidden;
+}
+
 /* Background Image effect */
 body {
     background: linear-gradient(
@@ -9,11 +25,11 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    margin: 0 0 200px;
 }
 
 
 /* Overlay navbar style */
-
 .overlay {
     height: 0%;
     width: 100%;
