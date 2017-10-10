@@ -33,8 +33,8 @@ class TicketController extends Controller
         $ticket_details->issue = $allRequest['issue'];
         $ticket_details->user_id = $allRequest['user_id'];
         $ticket_details->status = 'pending';
-        $ticket_details->priority = '1';
-        $ticket_details->escLevel = 'low';
+        $ticket_details->priority = 'low';
+        $ticket_details->escLevel = '1';
         $ticket_details->save();
 
         $ticketComments = new Comment();
