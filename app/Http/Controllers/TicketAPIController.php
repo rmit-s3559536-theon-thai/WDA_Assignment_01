@@ -13,11 +13,12 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class TicketAPIController extends Controller
 {
+
+    // List all the tickets stored in MySQL as a neat JSON format.
     public function index(TicketDetails $ticket)
     {
-//        $tickets = TicketDetails::paginate(10);
-
         $tickets = $ticket->with('comments')->get();
+
         if (!$tickets) {
             throw new HttpException(400, "Invalid data");
         }
@@ -28,6 +29,7 @@ class TicketAPIController extends Controller
         );
     }
 
+    // Display selected ticket itself as a JSON format.
     public function show($id)
     {
         if (!$id) {
@@ -42,10 +44,9 @@ class TicketAPIController extends Controller
 
     }
 
+    // Create a new ticket
     public function store(Request $request)
     {
-
-
         $allRequest = $request->all();
 
         $ticket_details = new TicketDetails();
@@ -63,11 +64,6 @@ class TicketAPIController extends Controller
 
         $ticketComments->ticket_details_id = $ticket_details->id;
         $ticketComments->save();
-
-
-
-
-
         if ($ticket_details->save()) {
             return $ticket_details;
         }
@@ -75,30 +71,10 @@ class TicketAPIController extends Controller
         throw new HttpException(400, "Invalid data");
     }
 
-
-    public function update(Request $request, $id)
-    {
-        if (!$id) {
-            throw new HttpException(400, "Invalid id");
-        }
-
-        $ticket = TicketDetails::find($id);
-
-        $ticket->os = $request->input('os');
-        $ticket->issue = $request->input('issue');
-        $ticket->status = $request->input('status');
-        $ticket->priority = $request->input('priority');
-        $ticket->escLevel = $request->input('escLevel');
-        $ticket->comments->comment = $request->input('comment');
-        $ticket->user_id = $request['user_id'];
-
-        if ($ticket->save()) {
-            return $ticket;
-        }
-
-        throw new HttpException(400, "Invalid data");
-    }
-
+    /*
+     * Below 3 functions work for updating specific feature
+     * Escalation Level, Priority, and Status respectively(PUT).
+     */
     public function updateEscLevel(Request $request, $id)
     {
         if (!$id) {
@@ -106,7 +82,6 @@ class TicketAPIController extends Controller
         }
 
         $ticket = TicketDetails::find($id);
-//        $ticket->priority = $request['priority'];
         $ticket->escLevel = $request['escLevel'];
 
         if ($ticket->save()) {
@@ -116,6 +91,7 @@ class TicketAPIController extends Controller
         throw new HttpException(400, "Invalid data");
     }
 
+
     public function updatePriority(Request $request, $id)
     {
         if (!$id) {
@@ -124,7 +100,6 @@ class TicketAPIController extends Controller
 
         $ticket = TicketDetails::find($id);
         $ticket->priority = $request['priority'];
-//        $ticket->escLevel = $request['escLevel'];
 
         if ($ticket->save()) {
             return $ticket;
@@ -141,7 +116,6 @@ class TicketAPIController extends Controller
 
         $ticket = TicketDetails::find($id);
         $ticket->status = $request['status'];
-//        $ticket->escLevel = $request['escLevel'];
 
         if ($ticket->save()) {
             return $ticket;
@@ -150,6 +124,7 @@ class TicketAPIController extends Controller
         throw new HttpException(400, "Invalid data");
     }
 
+    // Add new comment into existing ticket(POST).
     public function addComment(Request $request)
     {
         $comment = new Comment();
@@ -164,6 +139,7 @@ class TicketAPIController extends Controller
         throw new HttpException(400, "Invalid data");
     }
 
+    // Delete the ticket.
     public function destroy($id)
     {
         if (!$id) {

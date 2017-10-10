@@ -1,3 +1,4 @@
+/* Background Image effect */
 body {
     background: linear-gradient(
             rgba(0, 0, 0, 0.5),
@@ -63,13 +64,6 @@ body {
         right: 35px;
     }
 }
-
-/*.backgroundImage {*/
-    /*background-image:url('../images/bg.jpg');*/
-    /*background-attachment:fixed;*/
-    /*background-size:100%;*/
-    /*background-repeat:no-repeat;*/
-/*}*/
 
 /* Font declaration */
 .headingFont {

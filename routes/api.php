@@ -25,11 +25,9 @@ Route::group(['middleware' => 'cors'], function () {
     Route::get('/tickets', 'TicketAPIController@index');
     Route::get('/tickets/{id}', 'TicketAPIController@show');
     Route::post('/tickets', 'TicketAPIController@store');
-    //Route::put('/tickets/{id}', 'TicketAPIController@update');
     Route::put('/tickets/{id}/esclevel', 'TicketAPIController@updateEscLevel');
     Route::put('/tickets/{id}/priority', 'TicketAPIController@updatePriority');
     Route::put('/tickets/{id}/status', 'TicketAPIController@updateStatus');
     Route::post('/tickets/{id}/comment', 'TicketAPIController@addComment');
-
     Route::delete('/tickets/{id}', 'TicketAPIController@destroy');
 });
